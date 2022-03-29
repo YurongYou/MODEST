@@ -68,5 +68,5 @@ ln -s LYFT_KITTI_FORMAT/training/image_2
 After [installing OpenPCDet](../../downstream/OpenPCDet/docs/INSTALL.md), run
 ```bash
 cd downstream/OpenPCDet/
-python -m pcdet.datasets.kitti.kitti_dataset create_kitti_infos tools/cfgs/dataset_configs/lyft_dataset.yaml
+python -m pcdet.datasets.kitti.kitti_dataset create_kitti_infos tools/cfgs/dataset_configs/lyft_dataset.yaml True
 ```

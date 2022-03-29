@@ -65,13 +65,13 @@ for ((i = ${start_iter} ; i <= ${max_iter} ; i++)); do
     # start training
     echo "=> ${iter_name} training"
     cd ${proj_root_dir}/downstream/OpenPCDet/tools
-    bash scripts/dist_train_tmp.sh 4 --cfg_file cfgs/nuscenes_boston_models/${model}.yaml \
+    bash scripts/dist_train.sh 4 --cfg_file cfgs/nuscenes_boston_models/${model}.yaml \
         --extra_tag ${iter_name} --merge_all_iters_to_one_epoch \
         --fix_random_seed \
         --set DATA_CONFIG.DATA_PATH ../data/nusc_${iter_name}
 
     # generate the preditions on the training set
-    bash scripts/dist_test_tmp.sh 4 --cfg_file cfgs/nuscenes_boston_models/${model}.yaml \
+    bash scripts/dist_test.sh 4 --cfg_file cfgs/nuscenes_boston_models/${model}.yaml \
         --extra_tag ${iter_name} --eval_tag trainset_0 \
         --ckpt ../output/nuscenes_boston_models/${model}/${iter_name}/ckpt/checkpoint_epoch_80.pth \
         --set DATA_CONFIG.DATA_PATH ../data/nusc_${iter_name} \

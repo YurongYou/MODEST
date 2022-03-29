@@ -27,7 +27,7 @@ Current 3D object detectors for autonomous driving are almost entirely trained o
 conda create --name modest python=3.8
 conda activate modest
 conda install pytorch=1.9.0 torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia
-pip install opencv-python matplotlib wandb scipy tqdm easydict scikit-learn pyquaternion
+pip install opencv-python matplotlib wandb scipy tqdm easydict scikit-learn pyquaternion pillow==8.3.2
 # for managing experiments
 pip install hydra-core --upgrade
 pip install hydra_colorlog --upgrade
@@ -87,7 +87,7 @@ bash scripts/self_training_nuscenes.sh
 ## Evaluation
 ```bash
 cd downstream/OpenPCDet/tools
-OMP_NUM_THREADS=6 bash scripts/dist_test.sh 4 --cfg_file <cfg> --ckpt <ckpt_path>
+bash scripts/dist_test.sh 4 --cfg_file <cfg> --ckpt <ckpt_path>
 ```
 
 ## Checkpoints
@@ -117,3 +117,14 @@ OMP_NUM_THREADS=6 bash scripts/dist_test.sh 4 --cfg_file <cfg> --ckpt <ckpt_path
 | PointRCNN | 0 | | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
 | PointRCNN | 10 | | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
 
+## License
+This project is under the MIT License.
+We use [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) in this project and it are under the Apache-2.0 License.
+We list our changes [here](CHANGES.md).
+
+## Contact
+Please open an issue if you have any questions about using this repo.
+
+## Acknowledgement
+This work uses [OpenPCDet](https://github.com/open-mmlab/OpenPCDet).
+We also use the scripts from [3D_adapt_auto_driving](https://github.com/cxy1997/3D_adapt_auto_driving) for converting Lyft and nuScenes dataset into KITTI format.

@@ -2,7 +2,6 @@ from functools import partial
 
 import numpy as np
 import torch
-import MinkowskiEngine as ME
 
 from ...utils import common_utils
 from . import augmentor_utils, database_sampler

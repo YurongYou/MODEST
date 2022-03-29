@@ -7,7 +7,6 @@ from torch.utils.data import dataset
 from skimage import io
 import os
 import os.path as osp
-import MinkowskiEngine as ME
 import torch
 
 from . import kitti_utils
@@ -485,15 +484,15 @@ class KittiDataset(DatasetTemplate):
         return data_dict
 
 
-def create_kitti_infos(dataset_cfg, class_names, data_path, save_path, if_gtdatabase=True, workers=4):
+def create_kitti_infos(dataset_cfg, class_names, data_path, save_path, if_val=True, workers=4):
     print(data_path)
     dataset = KittiDataset(dataset_cfg=dataset_cfg, class_names=class_names, root_path=data_path, training=False)
     train_split, val_split = 'train', 'val'
 
     train_filename = save_path / ('kitti_infos_%s.pkl' % train_split)
     val_filename = save_path / ('kitti_infos_%s.pkl' % val_split)
-    trainval_filename = save_path / 'kitti_infos_trainval.pkl'
-    test_filename = save_path / 'kitti_infos_test.pkl'
+    # trainval_filename = save_path / 'kitti_infos_trainval.pkl'
+    # test_filename = save_path / 'kitti_infos_test.pkl'
 
     print('---------------Start to generate data infos---------------')
 
@@ -503,12 +502,12 @@ def create_kitti_infos(dataset_cfg, class_names, data_path, save_path, if_gtdata
         pickle.dump(kitti_infos_train, f)
     print('Kitti info train file is saved to %s' % train_filename)
 
-    # if if_val:
-    # dataset.set_split(val_split)
-    # kitti_infos_val = dataset.get_infos(num_workers=workers, has_label=True, count_inside_pts=True)
-    # with open(val_filename, 'wb') as f:
-    #     pickle.dump(kitti_infos_val, f)
-    # print('Kitti info val file is saved to %s' % val_filename)
+    if if_val:
+        dataset.set_split(val_split)
+        kitti_infos_val = dataset.get_infos(num_workers=workers, has_label=True, count_inside_pts=True)
+        with open(val_filename, 'wb') as f:
+            pickle.dump(kitti_infos_val, f)
+        print('Kitti info val file is saved to %s' % val_filename)
 
     # with open(trainval_filename, 'wb') as f:
     #     pickle.dump(kitti_infos_train + kitti_infos_val, f)
@@ -519,10 +518,9 @@ def create_kitti_infos(dataset_cfg, class_names, data_path, save_path, if_gtdata
     # with open(test_filename, 'wb') as f:
     #     pickle.dump(kitti_infos_test, f)
     # print('Kitti info test file is saved to %s' % test_filename)
-    if if_gtdatabase:
-        print('---------------Start create groundtruth database for data augmentation---------------')
-        dataset.set_split(train_split)
-        dataset.create_groundtruth_database(train_filename, split=train_split)
+    print('---------------Start create groundtruth database for data augmentation---------------')
+    dataset.set_split(train_split)
+    dataset.create_groundtruth_database(train_filename, split=train_split)
 
     print('---------------Data preparation Done---------------')
 
@@ -535,13 +533,11 @@ if __name__ == '__main__':
         from easydict import EasyDict
         dataset_cfg = EasyDict(yaml.load(open(sys.argv[2])))
         ROOT_DIR = (Path(__file__).resolve().parent / '../../../').resolve()
-        data_path = dataset_cfg.DATA_PATH if len(sys.argv) == 3 else sys.argv[3]
+        data_path = dataset_cfg.DATA_PATH if len(sys.argv) < 4 else sys.argv[3]
         create_kitti_infos(
             dataset_cfg=dataset_cfg,
             class_names=['Car', 'Pedestrian', 'Cyclist'],
-            # data_path=ROOT_DIR / 'data' / 'kitti',
-            # save_path=ROOT_DIR / 'data' / 'kitti'
             data_path=ROOT_DIR / 'tools' / data_path,
             save_path=ROOT_DIR / 'tools' / data_path,
-            if_gtdatabase=True if len(sys.argv) == 4 else False
+            if_val=False if len(sys.argv) < 5 else sys.argv[4] == "True"
         )

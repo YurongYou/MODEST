@@ -2,7 +2,6 @@ from collections import defaultdict
 from pathlib import Path
 import copy
 
-import MinkowskiEngine as ME
 import torch
 import numpy as np
 import torch.utils.data as torch_data

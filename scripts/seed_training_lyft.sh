@@ -49,13 +49,13 @@ fi
 # start training
 echo "=> ${iter_name} training"
 cd ${proj_root_dir}/downstream/OpenPCDet/tools
-bash scripts/dist_train_tmp.sh 4 --cfg_file cfgs/lyft_models/${model}.yaml \
+bash scripts/dist_train.sh 4 --cfg_file cfgs/lyft_models/${model}.yaml \
     --extra_tag ${iter_name} --merge_all_iters_to_one_epoch \
     --fix_random_seed \
     --set DATA_CONFIG.DATA_PATH ../data/lyft_${iter_name}
 
 # generate the preditions on the training set
-bash scripts/dist_test_tmp.sh 4 --cfg_file cfgs/lyft_models/${model}.yaml \
+bash scripts/dist_test.sh 4 --cfg_file cfgs/lyft_models/${model}.yaml \
     --extra_tag ${iter_name} --eval_tag trainset_0 \
     --ckpt ../output/lyft_models/${model}/${iter_name}/ckpt/checkpoint_epoch_60.pth \
     --set DATA_CONFIG.DATA_PATH ../data/lyft_${iter_name} \
