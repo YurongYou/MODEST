@@ -1,5 +1,5 @@
 DATASET: 'KittiDataset'
-DATA_PATH: '../data/lyft_dynamic_obj'
+DATA_PATH: '../data/lyft'
 
 POINT_CLOUD_RANGE: [0, -40, -3, 90.4, 40, 1]
 

@@ -94,28 +94,28 @@ bash scripts/dist_test.sh 4 --cfg_file <cfg> --ckpt <ckpt_path>
 ### Lyft experiments
 | Model | ST rounds | Checkpoint  | Config file |
 | ----- | :----:  | :----: | :----: |
-| PointRCNN | 0 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 1 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 10 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 20 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 30 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 40 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 0 | [link](https://drive.google.com/file/d/1yBv-puK4KKajgEq4-BpjKto6ANMH5Gll/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 1 | [link](https://drive.google.com/file/d/12WFFlsnL0I626d5ChlFfBAIZaQ_44Aq5/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 10 | [link](https://drive.google.com/file/d/1ZZSDjdqnc0dMDZBnkOsEH9kFIGAhwB94/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 20 | [link](https://drive.google.com/file/d/1oHKuvMJgrOLVd1IEHwmIazxgsFG_MC2V/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 30 | [link](https://drive.google.com/file/d/1Kh31tNBr2kEqb6LDa_IYlTLLrMIPooPI/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 40 | [link](https://drive.google.com/file/d/18b_3YGCBFbvQcdLfmYggLyMrorQ85yDG/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
 
 | Model | ST rounds | Checkpoint  | Config file |
 | ----- | :----:  | :----: | :----: |
-| PointPillars | 0 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointpillar_dynamic_obj.yaml) |
-| PointPillars | 10 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointpillar_dynamic_obj.yaml) |
+| PointPillars | 0 | [link](https://drive.google.com/file/d/14g7joQOOxkwYXwtJuLmXlhsHj8xsAZtm/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointpillar_dynamic_obj.yaml) |
+| PointPillars | 10 | [link](https://drive.google.com/file/d/1uxQKXV0UHqtcZ1SEedao9gDkUZ6hX5I4/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointpillar_dynamic_obj.yaml) |
 
 | Model | ST rounds | Checkpoint  | Config file |
 | ----- | :----:  | :----: | :----: |
-| SECOND | 0 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/second_dynamic_obj.yaml) |
-| SECOND | 10 | | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/second_dynamic_obj.yaml) |
+| SECOND | 0 | [link](https://drive.google.com/file/d/1qcMaxVmJ29Foe52Iq1z2EcOGXY8mePAN/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/second_dynamic_obj.yaml) |
+| SECOND | 10 | [link](https://drive.google.com/file/d/1sej3pHLj9t_7ZY6tetYsuX5rJjslswmS/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/second_dynamic_obj.yaml) |
 
 ### nuScenes experiments
 | Model | ST rounds | Checkpoint  | Config file |
 | ----- | :----:  | :----: | :----: |
-| PointRCNN | 0 | | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 10 | | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 0 | [link](https://drive.google.com/file/d/1vZy49Poy7PxqnRszXQWNFRvU9W9m2GQn/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 10 | [link](https://drive.google.com/file/d/1PE4MlO980-wk5KM_2c_Ghu2ArwNQjWxS/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
 
 ## License
 This project is under the MIT License.
