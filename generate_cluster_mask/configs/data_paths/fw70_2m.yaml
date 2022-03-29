@@ -1,0 +1,9 @@
+track_path: ${work_dir}/meta_data/lyft/fw70_2m_train_track_list.pkl
+idx_info: ${work_dir}/meta_data/lyft/fw70_2m_valid_train_idx_info.pkl
+load_precomputed_lidars: null
+load_save_precomputed_trans_mat: null
+idx_list: ${work_dir}/meta_data/lyft/fw70_2m_train_idx.txt
+pp_score_path: ${work_dir}/intermediate_results/lyft_pp_score_fw70_2m_r0.3
+seg_save_dst: ${work_dir}/intermediate_results/lyft_seg_pp_score_fw70_2m_r0.3/
+bbox_info_save_dst: ${work_dir}/intermediate_results/lyft_bbox_pp_score_fw70_2m_r0.3/
+label_file_save_dst: ${work_dir}/intermediate_results/lyft_labels_pp_score_fw70_2m_r0.3_fov/

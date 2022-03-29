@@ -1,0 +1,18 @@
+work_dir: ${hydra:runtime.cwd}
+save_dir: ${hydra:run.dir}
+
+defaults:
+  - data_paths: fw70_2m.yaml
+
+total_part: 1
+part: 0
+seed: 1024
+max_neighbor_dist: 0.3
+remove_ground_plane: False
+limit_traversals: -1
+data_root: ???
+
+nusc: False
+add_random_noise: 0
+skip_ephe: False
+ephe_type: entropy

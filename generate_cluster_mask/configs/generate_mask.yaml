@@ -1,0 +1,43 @@
+defaults:
+  - data_paths: fw70_2m.yaml
+
+work_dir: ${hydra:runtime.cwd}
+save_dir: ${hydra:run.dir}
+
+total_part: 1
+part: 0
+
+data_root: ???
+calib_path: ${data_root}/calib
+ptc_path: ${data_root}/velodyne
+
+plane_estimate:
+  range: [[-70, 70], [-20, 20]]
+  max_hs: -1.5
+  offset: 0.05
+
+limit_range: [[-70, 70], [-40, 40]]
+graph:
+  neighbor_type: radius_mutual_knn
+  affinity_type: l1
+  n_neighbors: 70
+  radius: 2.
+
+clustering:
+  method: DBSCAN
+
+  DBSCAN:
+    eps: 0.1
+    min_samples: 10
+
+filtering:
+  min_points: 10
+  max_volume: 120
+  min_volume: 0.5
+  min_max_height: 0.5
+  max_min_height: 1.
+  percentile: 20
+  min_percentile_pp_score: 0.7
+
+bbox_gen:
+  fit_method: closeness_to_edge

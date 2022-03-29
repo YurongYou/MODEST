@@ -1,0 +1,1 @@
+../../../../../data_preprocessing/nuscenes/meta_data/test_idx.txt

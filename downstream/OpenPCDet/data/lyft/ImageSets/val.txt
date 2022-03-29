@@ -1,0 +1,1 @@
+../../../../../data_preprocessing/lyft/meta_data/fw70_2m_full_test_idx.txt

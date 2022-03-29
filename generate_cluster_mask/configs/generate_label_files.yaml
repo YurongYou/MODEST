@@ -1,0 +1,18 @@
+defaults:
+  - data_paths: fw70_2m.yaml
+
+work_dir: ${hydra:runtime.cwd}
+save_dir: ${hydra:run.dir}
+
+total_part: 1
+part: 0
+
+data_root: ???
+calib_path: ${data_root}/calib
+ptc_path: ${data_root}/velodyne
+
+image_shape: [1024, 1224]
+fov_only: True
+nms:
+  enable: True
+  threshold: 0.1

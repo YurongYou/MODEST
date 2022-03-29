@@ -1,0 +1,22 @@
+data_preprocessing/lyft/verify_lyft.pkl
+**.ipynb
+notebooks
+**.pyc
+generate_cluster_mask/outputs
+
+
+**__pycache__**
+**build**
+**egg-info**
+# **dist**
+*.idea/
+*.so
+# *.yaml
+# *.sh
+*.pth
+*.pkl
+*.zip
+*.bin
+output
+version.py
+**.egg
