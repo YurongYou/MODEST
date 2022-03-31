@@ -2,9 +2,11 @@
 
 This is the official code release for
 
-[CVPR 2022] **Learning to Detect Mobile Objects from LiDAR Scans Without Labels**.
+[[CVPR 2022] **Learning to Detect Mobile Objects from LiDAR Scans Without Labels**](https://arxiv.org/pdf/2203.15882.pdf).
 
 by [Yurong You](https://yurongyou.com/)\*, [Katie Z Luo](https://www.cs.cornell.edu/~katieluo/)\*, [Cheng Perng Phoo](https://www.cs.cornell.edu/~cpphoo/), [Wei-Lun Chao](https://sites.google.com/view/wei-lun-harry-chao), [Wen Sun](https://wensun.github.io/), [Bharath Hariharan](http://home.bharathh.info/), [Mark Campbell](https://research.cornell.edu/researchers/mark-campbell), and [Kilian Q. Weinberger](https://www.cs.cornell.edu/~kilian/)
+
+[Paper](https://arxiv.org/pdf/2203.15882.pdf)
 
 ![Figure](figures/banner.jpg)
 
