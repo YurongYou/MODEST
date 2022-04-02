@@ -202,7 +202,7 @@ class KittiConverter:
             scene_tokens = [scene['token'] for scene in boston_scenes]
             sample_tokens, sequence_mapping = self._split_to_samples_annotated(
                 scene_tokens)
-            lidar_tokens = [ld_token for ld_token, _ in sample_tokens]
+            lidar_tokens = [ld_token for ld_token, _, _ in sample_tokens]
             pickle.dump(lidar_tokens, open(os.path.join(self.nusc_kitti_dir,
                                               'training',
                                               "labeled_tokens.pkl"), "wb"))
@@ -221,11 +221,17 @@ class KittiConverter:
 
         # return
         print(len(sample_tokens))
-        with parallel_backend("threading", n_jobs=self.parallel_n_jobs):
-            Parallel()(delayed(self.process_token_to_kitti)(idx, lidar_token, cam_front_token)
-                       for idx, (lidar_token, cam_front_token) in tqdm(list(enumerate(sample_tokens))))
+        if self.convert_labels:
+            with parallel_backend("threading", n_jobs=self.parallel_n_jobs):
+                Parallel()(delayed(self.process_token_to_kitti)(idx, lidar_token, cam_front_token, sample_annotation_tokens)
+                        for idx, (lidar_token, cam_front_token, sample_annotation_tokens) in tqdm(list(enumerate(sample_tokens))))
+        else:
+            with parallel_backend("threading", n_jobs=self.parallel_n_jobs):
+                Parallel()(delayed(self.process_token_to_kitti)(idx, lidar_token, cam_front_token)
+                        for idx, (lidar_token, cam_front_token) in tqdm(list(enumerate(sample_tokens))))
 
-    def process_token_to_kitti(self, idx, lidar_token, cam_front_token):
+    def process_token_to_kitti(self, idx, lidar_token, cam_front_token,
+                               sample_annotation_tokens=None):
         kitti_to_nu_lidar = Quaternion(axis=(0, 0, 1), angle=np.pi / 2)
         kitti_to_nu_lidar_inv = kitti_to_nu_lidar.inverse
         imsize = (1600, 900)
@@ -334,6 +340,7 @@ class KittiConverter:
 
         # # Write label file.
         if self.convert_labels:
+            # sample_annotation_tokens = sample['anns']
             label_path = os.path.join(self.label_folder, sample_name + '.txt')
             if os.path.exists(label_path):
                 print('Skipping existing file: %s' % label_path)
@@ -552,7 +559,9 @@ class KittiConverter:
                 continue
             lidar_token = sample['data'][self.lidar_name]
             cam_front_token = sample['data'][self.cam_name]
-            samples.append((lidar_token, cam_front_token))
+            samples.append([lidar_token, cam_front_token])
+            if self.convert_labels:
+                samples[-1].append(sample['anns'])
             if sample["scene_token"] in sequence_mapping:
                 sequence_mapping[sample["scene_token"]].append(cnt)
             else:
