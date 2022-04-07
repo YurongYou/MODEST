@@ -105,7 +105,6 @@ def main(args: DictConfig):
         for idx in seq:
             l2es[-1].append(np.load(osp.join(l2e_path, f"{idx:06d}.npy")))
 
-    assert not args.nusc
     # process the whole training set
     if args.data_paths.idx_list is not None:
         idx_list = [int(x) for x in open(args.data_paths.idx_list).readlines()]
@@ -139,12 +138,10 @@ def main(args: DictConfig):
                         args.data_root,
                         "velodyne",
                         f"{track_list[seq_id][frame]:06d}.bin"))[:, :3]
-                if args.nusc:  # Remove center for nuscenes dataset
                     _ptc = remove_center(_ptc)
                 _relative_pose = get_relative_pose(
                     fixed_l2e=first_l2e, fixed_ego=first_pose,
                     query_l2e=l2es[seq_id][frame], query_ego=poses[seq_id][frame],
-                    KITTI2NU=_KITTI2NU_nusc if args.nusc else _KITTI2NU_lyft)
                 _ptc = transform_points(_ptc, _relative_pose)
                 _combined_ptcs_queue.append(_ptc)
             _combined_ptcs = np.concatenate(_combined_ptcs_queue)
@@ -165,7 +162,6 @@ def main(args: DictConfig):
         trans_mat = get_relative_pose(
             fixed_l2e=first_l2e, fixed_ego=first_pose,
             query_l2e=origin_l2e, query_ego=origin_pose,
-            KITTI2NU=_KITTI2NU_nusc if args.nusc else _KITTI2NU_lyft)
         if args.data_paths.load_save_precomputed_trans_mat is not None:
             np.save(osp.join(args.data_paths.load_save_precomputed_trans_mat,
                                 f"{origin_idx:06d}.npy"),
