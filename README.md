@@ -78,12 +78,12 @@ bash scripts/seed_training_nuscenes.sh
 
 ### Self-training
 #### Lyft (default PRCNN model)
-```
-bash scripts/self_training_lyft.sh
+```bash
+bash scripts/self_training_lyft.sh -C "det_filtering.pp_score_threshold=0.7 det_filtering.pp_score_percentile=20 data_paths.bbox_info_save_dst=null"
 ```
 #### nuScenes (default PRCNN model)
-```
-bash scripts/self_training_nuscenes.sh
+```bash
+bash scripts/self_training_nuscenes.sh -C "data_paths=nusc.yaml det_filtering.pp_score_threshold=0.7 det_filtering.pp_score_percentile=20 data_paths.bbox_info_save_dst=null calib_path=$(pwd)/downstream/OpenPCDet/data/nuscenes_boston/training/calib ptc_path=$(pwd)/downstream/OpenPCDet/data/nuscenes_boston/training/velodyne image_shape=[900,1600]"
 ```
 
 ## Evaluation
