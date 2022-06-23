@@ -14,7 +14,7 @@ generate_cluster_mask/outputs
 # *.yaml
 # *.sh
 *.pth
-*.pkl
+# *.pkl
 *.zip
 *.bin
 output
