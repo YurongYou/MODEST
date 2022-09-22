@@ -6,7 +6,7 @@ This is the official code release for
 
 by [Yurong You](https://yurongyou.com/)\*, [Katie Z Luo](https://www.cs.cornell.edu/~katieluo/)\*, [Cheng Perng Phoo](https://www.cs.cornell.edu/~cpphoo/), [Wei-Lun Chao](https://sites.google.com/view/wei-lun-harry-chao), [Wen Sun](https://wensun.github.io/), [Bharath Hariharan](http://home.bharathh.info/), [Mark Campbell](https://research.cornell.edu/researchers/mark-campbell), and [Kilian Q. Weinberger](https://www.cs.cornell.edu/~kilian/)
 
-[Paper](https://arxiv.org/pdf/2203.15882.pdf)
+[Paper](https://arxiv.org/pdf/2203.15882.pdf) | [Video](https://www.youtube.com/watch?v=EXq1XgF9eXI)
 
 **Interested in perception with multiple traversals? Also see [Hindsight is 20/20](https://github.com/YurongYou/Hindsight).**
 
