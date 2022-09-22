@@ -8,6 +8,8 @@ by [Yurong You](https://yurongyou.com/)\*, [Katie Z Luo](https://www.cs.cornell.
 
 [Paper](https://arxiv.org/pdf/2203.15882.pdf)
 
+**Interested in perception with multiple traversals? Also see [Hindsight is 20/20](https://github.com/YurongYou/Hindsight).**
+
 ![Figure](figures/banner.jpg)
 
 ### Abstract
