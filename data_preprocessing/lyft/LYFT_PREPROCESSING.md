@@ -64,6 +64,8 @@ ln -s LYFT_KITTI_FORMAT/training/label_2
 ln -s LYFT_KITTI_FORMAT/training/calib
 ln -s LYFT_KITTI_FORMAT/training/planes
 ln -s LYFT_KITTI_FORMAT/training/image_2
+ln -s LYFT_KITTI_FORMAT/training/oxts
+ln -s LYFT_KITTI_FORMAT/training/l2e
 ```
 After [installing OpenPCDet](../../downstream/OpenPCDet/docs/INSTALL.md), run
 ```bash
