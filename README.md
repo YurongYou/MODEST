@@ -9,6 +9,7 @@ by [Yurong You](https://yurongyou.com/)\*, [Katie Z Luo](https://www.cs.cornell.
 [Paper](https://arxiv.org/pdf/2203.15882.pdf) | [Video](https://www.youtube.com/watch?v=EXq1XgF9eXI)
 
 **Interested in perception with multiple traversals? Also see [Hindsight is 20/20](https://github.com/YurongYou/Hindsight).**
+**Interested in more object discovery work? Also see [Discovery from Reward Finetuning](https://github.com/katieluo88/DRIFT).**
 
 ![Figure](figures/banner.jpg)
 
