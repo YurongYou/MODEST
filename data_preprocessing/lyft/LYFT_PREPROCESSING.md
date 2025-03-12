@@ -7,6 +7,7 @@ into `LYFT_ROOT`. Install Lyft Dataset SDK (https://github.com/lyft/nuscenes-dev
 ```bash
 pip install -U git+https://github.com/lyft/nuscenes-devkit
 ```
+**Edit:** The Lyft L5 dataset has moved! Please download from the official site: https://woven.toyota/en/perception-dataset.
 
 We have been experimenting with an earlier version of lyft dataset
 (obtained on Aug 16 2019, now this version seems not available from the official website),
