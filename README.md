@@ -99,28 +99,28 @@ bash scripts/dist_test.sh 4 --cfg_file <cfg> --ckpt <ckpt_path>
 ### Lyft experiments
 | Model | ST rounds | Checkpoint  | Config file |
 | ----- | :----:  | :----: | :----: |
-| PointRCNN | 0 | [link](https://drive.google.com/file/d/1Ybgks4g0u3hl54n4nWmttPAmsrdbiS0l/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 1 | [link](https://drive.google.com/file/d/18h0XxMgMLCkQQt0lddOhs41Y1Dd41ctv/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 10 | [link](https://drive.google.com/file/d/1-YlEBasUbNB5CKQmXDw3MOzPkFX-9nW_/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 20 | [link](https://drive.google.com/file/d/1k8IhZyd5edaeS1FPjlw-hhBHGyFycHEj/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 30 | [link](https://drive.google.com/file/d/19mD17T4j3vk-l0QpUP1AjzoVkdVj1soQ/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 40 | [link](https://drive.google.com/file/d/1hjKIB2e4PdI4LvWQC7st4806kcJtpugI/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 0 | [link](https://drive.google.com/file/d/1Y1o3v-Avy3m-0qRMQsaj0P3iagfX15IQ/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 1 | [link](https://drive.google.com/file/d/1Klz1BwlZgoM2XOV_oi4tCp6rCDxvU63M/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 10 | [link](https://drive.google.com/file/d/14OPC0jp-HyOvNrBYTUhqdZNw2R1Z28-0/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 20 | [link](https://drive.google.com/file/d/1k_W6ATi_kFyfai7yCEIASgY_8dnTYGCe/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 30 | [link](https://drive.google.com/file/d/11Ve_iwZzn3soZXqjamNzLaMmNN86Unvh/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 40 | [link](https://drive.google.com/file/d/1UXUAxIrmilAt9dVXC4zXxX0b_8RhuM2c/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointrcnn_dynamic_obj.yaml) |
 
 | Model | ST rounds | Checkpoint  | Config file |
 | ----- | :----:  | :----: | :----: |
-| PointPillars | 0 | [link](https://drive.google.com/file/d/1reCjHSpFVBJt7_9ciThKBCgdbo3u6E4L/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointpillar_dynamic_obj.yaml) |
-| PointPillars | 10 | [link](https://drive.google.com/file/d/1cJYhPee6vyxSi9xTxPKXTTtq3a7tZVDo/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointpillar_dynamic_obj.yaml) |
+| PointPillars | 0 | [link](https://drive.google.com/file/d/1u-vwXLgsJQZgjeiHHn5FH5KYE8aUaMFf/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointpillar_dynamic_obj.yaml) |
+| PointPillars | 10 | [link](https://drive.google.com/file/d/1qSEUr-a6Nn6gF9uc-zpUlRWZHiMWhZyb/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/pointpillar_dynamic_obj.yaml) |
 
 | Model | ST rounds | Checkpoint  | Config file |
 | ----- | :----:  | :----: | :----: |
-| SECOND | 0 | [link](https://drive.google.com/file/d/1kmT57XyAnTZvkwtLBDg-Nev_Bz62pgfQ/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/second_dynamic_obj.yaml) |
-| SECOND | 10 | [link](https://drive.google.com/file/d/1SesvQ44qaAGv8GAFqH0o0ABMq8aQarSe/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/second_dynamic_obj.yaml) |
+| SECOND | 0 | [link](https://drive.google.com/file/d/1ZgS5MmLCWh9dcqEkdJ8PZzh0mwSNoQdd/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/second_dynamic_obj.yaml) |
+| SECOND | 10 | [link](https://drive.google.com/file/d/14yFaTLDoEitn98h7f6UKzPGbdlvvECAP/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/lyft_models/second_dynamic_obj.yaml) |
 
 ### nuScenes experiments
 | Model | ST rounds | Checkpoint  | Config file |
 | ----- | :----:  | :----: | :----: |
-| PointRCNN | 0 | [link](https://drive.google.com/file/d/1PGDHFfUk-kVNIfAUs8iakagVtWS2xkeV/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
-| PointRCNN | 10 | [link](https://drive.google.com/file/d/1zzeMRIhpItq97n8lsaJHCjGi4sviqDQ8/view?usp=sharing) | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 0 | [link](https://drive.google.com/file/d/1oHTKcsO1sk7kJ-PjXIsYbvqUniM0XU6B/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
+| PointRCNN | 10 | [link](https://drive.google.com/file/d/1sy2lIsfURbt-6KRLjhm2LsKcGpNh9lm-/view?usp=drive_link) | [cfg](downstream/OpenPCDet/tools/cfgs/nuscenes_boston_models/pointrcnn_dynamic_obj.yaml) |
 
 ## License
 This project is under the MIT License.
